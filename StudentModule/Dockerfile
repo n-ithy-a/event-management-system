@@ -10,7 +10,7 @@ WORKDIR /app
 COPY StudentModule /app
 
 RUN chmod +x mvnw
-RUN ./mvnw clean package -DskipTests
+RUN ./mvnw clean package -Dmaven.test.skip=true
 
 EXPOSE 8083
 
